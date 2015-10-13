@@ -554,6 +554,25 @@ end</code></pre>
               </div>
             </div>
           </section>
+          <section>
+            <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 425px; height: 300px; left: 263px; top: 189px;" data-block-id="698c914a318a0a7359ce00fa16a8c7a4">
+              <div class="sl-block-content" style="z-index: 10;" data-highlight-theme="monokai">
+                <pre class="ruby"><code>class Google
+  def initialize(http, container)
+    @container = container
+    @results = []
+    @http = http
+  end
+
+  def search(query)
+    html = @http.get(query)
+    for item in html
+      @results &lt;&lt; @container.result(item)
+    end
+  end
+end</code></pre>
+          </section>
+
           <section data-id="ab5ac2b5b204f1d35594c08527cbc46f">
             <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 234px; height: 111px; left: 363px; top: 289px;" data-block-id="698c914a318a0a7359ce00fa16a8c7a4">
               <div class="sl-block-content" style="z-index: 10;" data-highlight-theme="monokai">
